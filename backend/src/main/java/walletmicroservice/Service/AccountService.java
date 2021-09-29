@@ -64,7 +64,9 @@ public class AccountService {
             return accountRepository.getAll();
     }
 
+/*
 
+ */
 
     //Rounds a double to two floating points. Not my creation.
     private double round(double value, int places) {

@@ -18,6 +18,8 @@ public interface AccountRepository extends CrudRepository<WalletEntity, Integer>
 
     WalletEntity findById(int id);
 
+    Boolean existsById(int id);
+
     @Query(nativeQuery = true, value = "SELECT BALANCE FROM walletmicroservice.WALLET WHERE ID = ? ")
     Double getBalance(int id);
 

@@ -14,6 +14,8 @@ public interface PlayerRepository extends CrudRepository<PlayerEntity, Integer> 
 
     PlayerEntity findById(int id);
 
+    Boolean existsById(int id);
+
     //@Query(nativeQuery = true, value = "DELETE FROM main.PLAYER WHERE main.PLAYER.ID = ? ")
     //public void deleteById(int id);
 

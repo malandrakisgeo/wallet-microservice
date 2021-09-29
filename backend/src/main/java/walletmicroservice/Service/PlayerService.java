@@ -19,6 +19,14 @@ public class PlayerService {
         return playerRepository.getAll();
     }
 
+    public PlayerEntity findById(int id) {
+        return playerRepository.findById(id);
+    }
+
+    public Boolean existsById(int id) {
+        return playerRepository.existsById(id);
+    }
+
     public void delete(PlayerEntity player) {
         this.deleteById(player.getId());
     }
@@ -30,5 +38,6 @@ public class PlayerService {
     public void save(PlayerEntity player) {
         playerRepository.save(player);
     }
+
 
 }
