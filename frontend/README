@@ -1,0 +1,15 @@
+This is the Angular frontend of the Wallet-Microservice app available on https://github.com/malandrakisgeo/walletMicroservice-backend .
+
+The logic of the application is fairly simple.
+
+A wallet (monetary account) holds the current balance for a person (in Dollars). The balance can be modified by registering transactions on the account, either debit
+transactions (removing funds) or credit transactions (adding funds).
+Each person is associated with one wallet only,  yet a wallet can be shared among several persons.
+The backend is merely a wallet microservice that manages credit/debit transactions on behalf of users.
+
+The frontend is deliberately simple, and by no means complete.
+There are several bugs to be fixed, and further functionalities are on their way.
+
+Meant to be used for educational purposes only.
+
+Most of the .css is based on Bootstrap.

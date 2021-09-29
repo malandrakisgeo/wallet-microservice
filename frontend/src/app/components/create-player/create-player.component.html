@@ -1,0 +1,18 @@
+<form (ngSubmit)="onSave()" >
+  <hr class="container">
+  <h2>New Player</h2>
+  <p>The form below will create a new player and a new account associated with him/her.</p>
+  <hr>
+  <input type="text"  [(ngModel)]="player.name" placeholder="Name" name="balance" required>
+  <br>
+  <input type="text"  [(ngModel)]="player.email" placeholder="Email" name="name">
+  <br>
+  <select name="account" id="account">
+    <option></option>
+    <option  *ngFor="let y of accs" >{{ y.name + ' ' + y.balance }}</option>
+  </select>
+  <button  type="submit" class="registerbtn">Create</button>
+
+</form>
+<div >
+</div>

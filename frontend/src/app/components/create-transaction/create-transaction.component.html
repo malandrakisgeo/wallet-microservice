@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSave()" >
+  <hr class="container">
+  <h2>New Transaction</h2>
+  <p></p>
+  <hr>
+  <input type="text"  [(ngModel)]="newtransaction.amount" placeholder="Amount" name="amount" required>
+  <br>
+  <select  [(ngModel)]="newtransaction.transactionType" name="transactionType" id="transactionType">
+    <option></option>
+    <option>credit</option>
+    <option>debit</option>
+  </select>
+  <br>
+  <select  [(ngModel)]="newtransaction.walletId" name="account" id="account">
+    <option></option>
+    <option  *ngFor="let y of accs" >{{y.id }}</option>
+  </select>
+  <br>
+  <button  type="submit" class="registerbtn">Create</button>
+
+</form>

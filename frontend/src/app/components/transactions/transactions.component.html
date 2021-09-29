@@ -1,0 +1,28 @@
+
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped" style="align-content: center; align-items: center">
+      <thead class="thead-dark">
+      <tr style="text-align: center">
+        <th scope="col">Id</th>
+        <th scope="col">Account associated</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Transaction type</th>
+        <th scope="col">Transaction date&time</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr style="text-align: center" *ngFor="let transaction of transactions"  id=" {{transaction.id}} ">
+        <td>{{ transaction.id }}</td>
+        <td  name="name"><a routerLink="/account/{{transaction.walletId}}">{{transaction.walletId}}</a></td>
+        <td  name="name">{{transaction.amount}}</td>
+        <td  name="name">{{transaction.transactionType}}</td>
+        <td  name="name">{{transaction.transactionDate  | date : 'medium'}}</td>
+
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

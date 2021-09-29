@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSave()" >
+  <hr class="container">
+  <h2>New Wallet</h2>
+  <hr>
+  <input type="text"  [(ngModel)]="account.balance" placeholder="Initial balance" name="balance" required>
+  <br>
+  <input type="text"  [(ngModel)]="account.name" placeholder="Name" name="name">
+  <br>
+  <button  type="submit" class="registerbtn">Create</button>
+
+</form>
+<div >
+</div>

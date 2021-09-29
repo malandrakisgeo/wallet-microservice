@@ -1,0 +1,33 @@
+<!--link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"-->
+<div class="card my-5">
+  <div class="card-body">
+    <h3 style="text-align: center">Click in the content to modify a user!</h3>
+    <table class="table table-bordered table-striped" style="align-content: center; align-items: center">
+      <thead class="thead-dark">
+      <tr style="text-align: center">
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th>Select</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr style="text-align: center" *ngFor="let user of players"  id=" {{user.id}} ">
+        <td>{{ user.id }}</td>
+        <td contenteditable name="name">{{user.name}}</td>
+        <td><input type="checkbox" style="text-align: center;" id="{{user.id}}" name="deletecheck" value="{{user.id}}" (change)="selectID(user,$event)">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div ><button (click)="onUpdate()"  type="submit"
+                  class="btn btn-info"><h4>Update data</h4></button>
+
+      <button (click)="onDelete()"  type="submit"
+               class="btn btn-info"><h4>Delete selected</h4></button></div>
+
+  </div>
+</div>
